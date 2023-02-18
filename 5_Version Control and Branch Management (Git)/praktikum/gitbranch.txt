@@ -1,13 +1,11 @@
 git branch featureA
 
------
-code text dari branch
+
+-------
+code text dari branch & pull request
 
 git add .
 git commit -m "tambah text dari branch"
 git push origin featureA
 
-code text dari pull request
-git add .
-git commit -m "tambah text pull request"
-git push origin featureA
+
