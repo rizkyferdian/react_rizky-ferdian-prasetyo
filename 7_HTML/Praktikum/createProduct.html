@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Product</title>
+    <style type="text/css">
+        body {
+            font-family: Cambria, "Times New Roman", serif;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- title -->
+    <h1>Create Product</h1>
+    <h2>Detail Product</h2>
+
+    <form action="">
+        <!-- input -->
+        <label for="productName">Product Name :</label><br>
+        <input type="text" required minlength="6" maxlength="50"><br>
+
+        <!-- select -->
+        <label for="productCategory">Product Category :</label><br>
+        <select name="dropdownCategory" required>
+            <option value=""></option>
+            <option value="Makanan">Makanan</option>
+            <option value="minuman">Minuman</option>
+        </select>
+        <br>
+
+        <!-- radio button -->
+        <label for="">Product Freshment :</label> <br>
+        <input type="radio" required>
+        <label for="brandNew">Brand New</label> <br>
+        <input type="radio" required>
+        <label for="secondHank">Second Hank</label> <br>
+        <input type="radio" required>
+        <label for="refurbished">Refurbished</label> <br>
+
+        <!-- Upload Image -->
+        <label for="imageUpload">Image of Product</label>
+        <input type="file" name="fileToUpload" id="fileToUpload" required><br>
+
+        <!-- Additional Description -->
+        <label for="desc">Additional Description</label><br>
+        <textarea name="" id="" cols="30" rows="10" required></textarea><br>
+
+        <!-- Product Price -->
+        <label for="price">Product Price</label><br>
+        <input type="number" placeholder="$100" required><br>
+
+
+        <button type="submit">Submit</button>
+
+    </form>
+</body>
+
+</html>
