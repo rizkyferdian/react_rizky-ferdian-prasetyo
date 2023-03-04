@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Product</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <!-- Navbar start -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav ">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white bg-primary rounded" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-primary" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-primary" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-primary">FaQs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-primary">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- title -->
+    <div class="text-center mt-5">
+        <img src="./images/Bootstrap_logo.png" width="50px" alt="">
+        <h1>Create Product</h1>
+        <p>Below is an example form built entirely with Bootstrap's form controls. Each required form group has a
+            <br>
+            validation state that can be triggered by attempting to submit the form without completing it.
+        </p>
+    </div>
+
+    <!-- form -->
+    <div class="container d-grid col-5 mt-5">
+        <form action="" method="post" onsubmit="return validate()">
+            <div class="row">
+                <div class="col">
+                    <h3 class="fw-semibold">Detail Form</h3>
+                </div>
+            </div>
+            <!-- Product Name -->
+            <div class="row">
+                <div class="col-6 position-relative">
+                    <label for="productName" class="fw-semibold">Product Name</label>
+                    <input type="text" id="productName" class="form-control">
+                </div>
+            </div>
+            <!-- Product Category -->
+            <div class="row mt-3">
+                <label for="" class="fw-semibold">Product Category</label>
+                <div class="col-5 position-relative">
+                    <select class="form-select" id="productCategory">
+                        <option value="">Choose</option>
+                        <option value="makanan">Makanan</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Upload File -->
+            <div class="row mt-3">
+                <div class="col-5 position-relative">
+                    <label class="form-label fw-semibold" for="customFile">Image of product</label>
+                    <input type="file" class="form-control" id="uploadFile" />
+                </div>
+            </div>
+
+            <!-- radio -->
+            <div class="row mt-3">
+                <label for="" class="fw-semibold">Product Freshness</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radioButton" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Brand New
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radioButton" id="flexRadioDefault2">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Second Hand
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radioButton" id="flexRadioDefault3">
+                    <label class="form-check-label" for="flexRadioDefault3">
+                        Refufbished
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group mt-3 position-relative">
+                <label for="exampleFormControlTextarea1">Additional Description</label>
+                <textarea class="form-control" id="description" rows="3"></textarea>
+            </div>
+
+            <!-- Product price -->
+            <div class="form-outline mx-auto mt-3 position-relative">
+                <label class="form-label" for="typeNumber">Product Price</label>
+                <input type="number" id="productPrice" class="form-control" />
+
+            </div>
+
+            <!-- Button -->
+            <div class="d-grid p-4 mt-5 mx-auto">
+                <button class="btn btn-primary" type="submit">Button</button>
+            </div>
+        </form>
+
+    </div>
+
+    <script>
+        function validate() {
+            var productName = document.getElementById("productName").value
+            var productPrice = document.getElementById("productPrice").value
+            var productCategory = document.getElementById("productCategory").value
+            var uploadFile = document.getElementById("uploadFile").files[0]
+            var description = document.getElementById("description").value
+            var radioButton = document.getElementsByName("radioButton");
+            var radioBtn
+
+            for (var i = 0; i < radioButton.length; i++) {
+                if (radioButton[i].checked == true) {
+                    radioBtn = true;
+                }
+            }
+
+
+            if (productName.length > 25) {
+                alert("Product Name tidak boleh melebihi 25 karakter")
+            } else if (productName.length > 10) {
+                alert("Last Name must not exceed 25 characters.")
+            } else if (productName.length < 1) {
+                alert("Please enter a valid Product name.")
+            } else if (productName.includes("{") ||
+                productName.includes("}") ||
+                productName.includes("@") ||
+                productName.includes("#")) {
+                alert("Name must not contain symbols.")
+            }
+            if (productPrice.length < 1) {
+                alert("Please enter a valid Product price.")
+            }
+
+            if (productCategory === "") {
+                alert("The product category field must be filled in")
+            }
+
+            if (!uploadFile) {
+                alert("The upload file field must be filled in")
+            }
+
+            if (!radioBtn) {
+                alert("The radio button field must be filled in");
+                return false;
+            }
+
+            if (description.length < 1) {
+                alert("The Additional Descrription field must be filled in")
+            }
+
+
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
