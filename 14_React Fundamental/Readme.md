@@ -73,7 +73,7 @@ class Header extends React.Component {
     super();
     this.state = {
       title: "Belajar Reactjs",
-      subTitle: "Panduan step-by-step Reactjs untuk pemula"
+      subTitle: "Reactjs untuk pemula"
     };
   }
 
