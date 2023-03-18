@@ -33,7 +33,7 @@ sebuah fungsi javascript yang hanya mengambil sebuah inputan, biasanya functiona
 <h2>3 Handling Event</h2>
 Event handling adalah proses menangani action atau interaction yang dilakukan user pada element-element di dalam aplikasi web. Dalam ReactJS, event handling bisa dilakukan dengan menambahkan event listener pada element tersebut.
 
-contoh penggunaan handling event: 
+contoh dari penggunaan handling event: 
 
 <h4>Function Component</h4>
 
