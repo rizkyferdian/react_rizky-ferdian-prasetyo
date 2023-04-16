@@ -8,5 +8,16 @@ Query pada GraphQL adalah permintaan atau pertanyaan yang dikirimkan oleh client
 
 Mutation pada GraphQL adalah operasi untuk memodifikasi data pada API GraphQL. Dalam GraphQL, operasi mutation digunakan untuk melakukan tindakan seperti menambah, mengubah, atau menghapus data pada server.
 
+contoh penggunaan mutation:
+```
+mutation {
+  tambahMahasiswa(nama: "Doni", umur: 25) {
+    id
+    nama
+    umur
+  }
+}
+```
+
 <h2>3 Apollo </h2>
 Apollo GraphQL adalah salah satu library atau framework yang paling populer digunakan untuk mengembangkan aplikasi berbasis GraphQL di berbagai platform seperti web, mobile, dan desktop.Apollo GraphQL menyediakan banyak fitur dan alat yang memudahkan para pengembang dalam mengimplementasikan GraphQL pada aplikasi mereka, seperti client dan server GraphQL, integrasi dengan berbagai framework front-end seperti React dan Angular, serta dukungan untuk state management dan caching data.
