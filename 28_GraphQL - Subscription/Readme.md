@@ -5,6 +5,8 @@
 Subscription pada GraphQL adalah fitur yang memungkinkan klien (client) untuk berlangganan atau subscribe pada pembaruan data secara real-time dari server. Dalam konteks GraphQL, subscription mirip dengan query dan mutation, namun dengan sifat yang berbeda karena hasilnya tidak hanya sekali, tetapi terus-menerus diperbarui oleh server ketika ada perubahan data yang terjadi.
 
 <h2> 2 Contoh Penggunaan </h2>
+
+Penggunaan GraphQL subscription sangat berguna untuk aplikasi yang memerlukan pembaruan data real-time, seperti aplikasi chat, notifikasi, dan aplikasi yang melibatkan interaksi real-time antara pengguna. 
 ```
 const MESSAGE_SUBSCRIPTION = gql`
   subscription MessageSubscription($roomId: ID!) {
